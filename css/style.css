@@ -1,0 +1,94 @@
+html {
+    width: 100%;
+
+}
+
+body {
+    min-height:100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 900px;
+    margin: auto;
+    padding: 0px;
+}
+
+
+#content {padding-bottom: 30px;}
+
+#footer {
+    background-color: #bdbdbd;
+    position:fixed;
+    bottom:0;
+    height: 30px;
+    width: 900px;
+    text-align: right;
+}
+
+header {
+    background-color: #bdbdbd;
+    height: 50px;
+    text-align: center;
+}
+
+img {
+    float: left;
+    max-width: 50%;
+    max-height: 70%;
+}
+
+ul {
+    height: 100%;
+}
+
+li {
+    vertical-align: top;
+    display: inline-block;
+}
+li a:link, li a:visited  {
+    display: block;
+    width: 150px;
+    height: 100%;
+    font-weight:bold;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: white;
+}
+
+li a:hover, a:active {
+    background-color: #a7a7a7;
+}
+
+#loginForm {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#regForm {
+    text-align: center;
+    margin-top: 10%;
+}
+
+div.ui-datepicker{
+    font-size:12px;
+    width: 250px;
+}
+
+iframe {
+    float: left;
+}
+
+.err {
+    text-align: right;
+    color: red;
+    font-size: small;
+}
