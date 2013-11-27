@@ -25,6 +25,7 @@ $data['isLoggedIn'] = 0;
 if(isset($_SESSION['id'])) {
 
     $data['isLoggedIn'] = 1;
+    $data['id'] = $_SESSION['id'];
 
 }
 /**
@@ -37,8 +38,8 @@ if(isset($_GET['nav'])) {
             $index->loadView('contacts', $data);
             break;
         case 'cabinet':
-            $data = array_merge($data, Database::getInstance()->getUserById($_SESSION['id'])[0]);
-            $data['id'] = $_SESSION['id'];
+            $dt = Database::getInstance()->getUserById($_SESSION['id']);
+            $data = array_merge($data, $dt[0] );
             $index->loadView('cabinet', $data);
             break;
         case 'registration':

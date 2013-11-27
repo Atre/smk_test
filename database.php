@@ -57,7 +57,8 @@ class Database {
         $res = mysqli_query($this->mysql, $query);
         // returns id if logged in or -1 if not
         if(mysqli_num_rows($res) > 0) {
-            return mysqli_fetch_row($res)[0];
+            $ret = mysqli_fetch_row($res);
+            return $ret[0];
         }
         return -1;
     }
