@@ -69,6 +69,14 @@ else {
     $index->loadView('main', $data);
 }
 
+if(isset($_POST['remove'])) {
+    if($data['isLoggedIn'] === 1 && isset($_SESSION['id'])) {
+        Database::getInstance()->deleteUser($_SESSION['id']);
+        unset($_SESSION['id']);
+        header("Location: index.php");
+    }   
+}
+
 /*
  * Form process
  */

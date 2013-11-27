@@ -76,4 +76,9 @@ class Database {
             return $ret;
         }
     }
+    
+    public function deleteUser($id) {
+        $query = "DELETE FROM users WHERE id = '$id'";
+        $res = mysqli_query($this->mysql, $query);
+    }
 } 

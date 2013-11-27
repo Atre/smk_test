@@ -27,7 +27,21 @@
         <span class="err" id="phone"></span> <br />
         <input type="submit" name="submit">
     </form>
+    <hr>
 </div>
+
+<form action="index.php" method='POST' onsubmit="return subm()">
+    <input type='submit' name='remove' value='Удалить'>
+</form>
+
+<script>
+    function subm() {
+        if(confirm('Точно?')) {
+            return true;
+        }
+        else return false;
+    }
+</script>
 
     
 
